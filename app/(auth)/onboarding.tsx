@@ -1,15 +1,15 @@
+import { useRouter } from 'expo-router';
 import React from 'react';
 import {
-    View,
-    Text,
-    StyleSheet,
-    SafeAreaView,
-    TouchableOpacity,
-    Image,
     Dimensions,
+    Image,
+    SafeAreaView,
     StatusBar,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from 'react-native';
-import { useRouter } from 'expo-router';
 import { colors } from '../../constants/theme';
 
 const { width } = Dimensions.get('window');
@@ -24,12 +24,12 @@ export default function OnboardingScreen() {
 
                 <View style={styles.topArea}>
                     <Image
-                        source={require('../../assets/imagen/logo.png')}
+                        source={require('../../assets/images/logo.png')}
                         style={styles.logo}
                         resizeMode="contain"
                     />
                     <Image
-                        source={require('../../assets/imagen/astronautaok.png')}
+                        source={require('../../assets/images/astronautaok.png')}
                         style={styles.astronaut}
                         resizeMode="contain"
                     />

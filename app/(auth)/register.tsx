@@ -1,20 +1,20 @@
+import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    View,
-    Text,
-    StyleSheet,
-    SafeAreaView,
-    ScrollView,
-    TouchableOpacity,
+    Image,
     KeyboardAvoidingView,
     Platform,
+    SafeAreaView,
+    ScrollView,
     StatusBar,
-    Image,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from 'react-native';
-import { useRouter } from 'expo-router';
-import { colors } from '../../constants/theme';
-import { Input } from '../../components/Input';
 import { PrimaryButton } from '../../components/Button';
+import { Input } from '../../components/Input';
+import { colors } from '../../constants/theme';
 import { validateRegister } from '../../hooks/useValidation';
 
 export default function RegisterScreen() {
@@ -39,7 +39,7 @@ export default function RegisterScreen() {
         setLoading(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         setLoading(false);
-        router.replace('/home');
+        router.replace('/welcome');
     }
 
     return (
@@ -58,12 +58,12 @@ export default function RegisterScreen() {
                         <Text style={styles.titleRegister}>Criar conta</Text>
 
                         <TouchableOpacity style={styles.facebookBtn} onPress={() => { }}>
-                            <Image source={require('../../assets/imagen/fece.png')} style={styles.socialIcon} resizeMode="contain" />
+                            <Image source={require('../../assets/images/fece.png')} style={styles.socialIcon} resizeMode="contain" />
                             <Text style={styles.facebookText}>CADASTRE-SE COM FACEBOOK</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.googleBtn} onPress={() => { }}>
-                            <Image source={require('../../assets/imagen/google.png')} style={styles.socialIcon} resizeMode="contain" />
+                            <Image source={require('../../assets/images/google.png')} style={styles.socialIcon} resizeMode="contain" />
                             <Text style={styles.googleText}>CADASTRE-SE COM GOOGLE</Text>
                         </TouchableOpacity>
 

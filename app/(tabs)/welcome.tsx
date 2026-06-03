@@ -11,7 +11,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
-import { colors } from '../constants/theme';
+import { colors } from '../../constants/theme';
 
 const { width, height } = Dimensions.get('window');
 
@@ -22,7 +22,7 @@ const STARS = [
     { x: 0.35, y: 0.62 }, { x: 0.65, y: 0.25 },
 ];
 
-export default function HomeScreen() {
+export default function WelcomeScreen() {
     const router = useRouter();
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const slideAnim = useRef(new Animated.Value(40)).current;
@@ -67,7 +67,7 @@ export default function HomeScreen() {
 
                 <Animated.View style={[styles.astronautWrap, { transform: [{ translateY: floatAnim }] }]}>
                     <Image
-                        source={require('../assets/imagen/astronautaexplicacao.png')}
+                        source={require('../../assets/images/astronautaexplicacao.png')}
                         style={styles.astronaut}
                         resizeMode="contain"
                     />
@@ -76,7 +76,7 @@ export default function HomeScreen() {
                 <Animated.View style={[styles.bottom, { opacity: fadeAnim }]}>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => router.push('/(auth)/onboarding')}
+                        onPress={() => router.push('/(tabs)/home')}
                         activeOpacity={0.9}
                     >
                         <Text style={styles.buttonText}>COMECE</Text>

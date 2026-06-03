@@ -1,21 +1,21 @@
+import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import {
-    View,
-    Text,
-    StyleSheet,
-    SafeAreaView,
-    ScrollView,
-    TouchableOpacity,
-    KeyboardAvoidingView,
-    Platform,
-    StatusBar,
     Alert,
     Image,
+    KeyboardAvoidingView,
+    Platform,
+    SafeAreaView,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    TouchableOpacity,
+    View,
 } from 'react-native';
-import { useRouter } from 'expo-router';
-import { colors } from '../../constants/theme';
-import { Input } from '../../components/Input';
 import { PrimaryButton } from '../../components/Button';
+import { Input } from '../../components/Input';
+import { colors } from '../../constants/theme';
 import { validateLogin } from '../../hooks/useValidation';
 
 export default function LoginScreen() {
@@ -35,7 +35,7 @@ export default function LoginScreen() {
         setLoading(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         setLoading(false);
-        router.replace('/home');
+        router.replace('/welcome');
     }
 
     return (
@@ -61,12 +61,12 @@ export default function LoginScreen() {
                         <Text style={styles.title}>Bem-vindo de volta!</Text>
 
                         <TouchableOpacity style={styles.facebookBtn} onPress={() => { }}>
-                            <Image source={require('../../assets/imagen/fece.png')} style={styles.socialIcon} resizeMode="contain" />
+                            <Image source={require('../../assets/images/fece.png')} style={styles.socialIcon} resizeMode="contain" />
                             <Text style={styles.facebookText}>CONTINUE COM FACEBOOK</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.googleBtn} onPress={() => { }}>
-                            <Image source={require('../../assets/imagen/google.png')} style={styles.socialIcon} resizeMode="contain" />
+                            <Image source={require('../../assets/images/google.png')} style={styles.socialIcon} resizeMode="contain" />
                             <Text style={styles.googleText}>CONTINUE COM GOOGLE</Text>
                         </TouchableOpacity>
 
