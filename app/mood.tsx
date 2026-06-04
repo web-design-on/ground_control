@@ -1,4 +1,5 @@
 import { PrimaryButton } from '@/components/Button';
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
 import { Image, ImageBackground, Pressable, StyleSheet, Text, View } from 'react-native';
 
@@ -35,6 +36,7 @@ function EmotionButton({ emotion, selected, onPress }: EmotionButtonProps) {
 }
 
 export default function MoodScreen() {
+    const router = useRouter();
     const [selectedEmotion, setSelectedEmotion] = useState<string | null>(null);
 
     const emotions = [
@@ -44,6 +46,10 @@ export default function MoodScreen() {
         { key: 'good', source: require('../assets/images/emotions/good.png') },
         { key: 'great', source: require('../assets/images/emotions/great.png') },
     ];
+
+    const handleSubmit = () => {
+        router.push('/(tabs)/home');
+    }
 
     return (
         <View style={styles.container}>
@@ -82,7 +88,7 @@ export default function MoodScreen() {
             <View style={styles.footer}>
                 <PrimaryButton
                     title="ENVIAR"
-                    onPress={() => { }}
+                    onPress={handleSubmit}
                 />
             </View>
         </View>
