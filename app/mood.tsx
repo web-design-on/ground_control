@@ -93,7 +93,6 @@ export default function MoodScreen() {
             </View>
         </View>
     );
-
 }
 
 const styles = StyleSheet.create({
