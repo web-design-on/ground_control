@@ -11,7 +11,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
-import { colors } from '../../constants/theme';
+import { colors } from '../constants/theme';
 
 const { width, height } = Dimensions.get('window');
 
@@ -67,7 +67,7 @@ export default function WelcomeScreen() {
 
                 <Animated.View style={[styles.astronautWrap, { transform: [{ translateY: floatAnim }] }]}>
                     <Image
-                        source={require('../../assets/images/astronautaexplicacao.png')}
+                        source={require('../assets/images/astronautaexplicacao.png')}
                         style={styles.astronaut}
                         resizeMode="contain"
                     />
@@ -76,7 +76,7 @@ export default function WelcomeScreen() {
                 <Animated.View style={[styles.bottom, { opacity: fadeAnim }]}>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => router.push('/(tabs)/home')}
+                        onPress={() => router.push('/(tabs)')}
                         activeOpacity={0.9}
                     >
                         <Text style={styles.buttonText}>COMECE</Text>

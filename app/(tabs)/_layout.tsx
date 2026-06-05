@@ -1,7 +1,32 @@
-import { Stack } from 'expo-router';
+import { Tabs } from 'expo-router';
+import { Image } from 'react-native';
 
 export default function TabLayout() {
   return (
-    <Stack screenOptions={{ headerShown: false }} />
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: '#ffffff',
+          paddingBottom: 8,
+          paddingTop: 8,
+          height: 104,
+        },
+        tabBarLabelStyle: {
+          fontSize: 12,
+          fontWeight: '600',
+        },
+        tabBarActiveTintColor: '#8E97FD',
+        tabBarInactiveTintColor: '#A0A3B1',
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: 'Home',
+          tabBarIcon: ({ color }) => ( <Image source={require('../../assets/icons/navigation/home.png')} style={{ width: 24, height: 24, tintColor: color }} /> ),
+        }}
+      />
+    </Tabs>
   );
 }
