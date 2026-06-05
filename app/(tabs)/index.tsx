@@ -186,7 +186,7 @@ const styles = StyleSheet.create({
     },
     cardButton: {
         alignSelf: 'flex-end',
-        backgroundColor: 'rgba(255,255,255,0.8)',
+        backgroundColor: 'rgb(255, 255, 255)',
         borderRadius: 20,
         paddingHorizontal: 16,
         paddingVertical: 8,
@@ -239,6 +239,7 @@ const styles = StyleSheet.create({
     moodContainer: {
         borderWidth: 1,
         borderColor: '#E6E1F2',
+        backgroundColor: '#FFFFFF',
         padding: 16,
         borderRadius: 16,
     },

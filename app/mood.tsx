@@ -48,7 +48,7 @@ export default function MoodScreen() {
     ];
 
     const handleSubmit = () => {
-        router.push('/(tabs)/home');
+        router.push('/(tabs)');
     }
 
     return (
