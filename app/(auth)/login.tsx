@@ -72,7 +72,7 @@ export default function LoginScreen() {
 
                         <View style={styles.divider}>
                             <View style={styles.line} />
-                            <Text style={styles.dividerText}>OR ENTRE COM E-MAIL</Text>
+                            <Text style={styles.dividerText}>OU ENTRE COM E-MAIL</Text>
                             <View style={styles.line} />
                         </View>
 

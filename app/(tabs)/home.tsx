@@ -1,10 +1,25 @@
+import HealthStatsCards from '@/components/HealthStatsCards';
 import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
 
+function getTimeGreeting(): string {
+    const hour = new Date().getHours();
+
+    if (hour >= 5 && hour < 12) {
+        return 'Bom dia';
+    } else if (hour >= 12 && hour < 18) {
+        return 'Boa tarde';
+    } else {
+        return 'Boa noite';
+    }
+}
+
 export default function HomeScreen() {
+    const greeting = getTimeGreeting();
+
     return (
         <ScrollView style={styles.scroll} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
             <View>
-                <Text style={styles.mainTitle}>Bom dia, Breno</Text>
+                <Text style={styles.mainTitle}>{greeting}, Breno</Text>
                 <Text style={styles.subtitle}>Venha completar seus desafios para uma ótima recompensa!</Text>
             </View>
 
@@ -52,19 +67,14 @@ export default function HomeScreen() {
 
             <Text style={styles.secondaryTitle}>Acompanhe sua saúde</Text>
 
-            <View style={styles.statsRow}>
-                <View style={[styles.statCard, styles.statCardPurple]}>
-    
-                </View>
-
-                <View style={[styles.statCard, styles.statCardOrange]}>
-
-                </View>
-
-                <View style={[styles.statCard, styles.statCardTeal]}>
- 
-                </View>
-            </View>
+            <HealthStatsCards
+                score={80}
+                scoreMax={100}
+                sentiment="Triste"
+                moodBars={[2, 4, 6, 9, 7, 5, 8, 6]}
+                trackedDays={31}
+                totalDays={365}
+            />
 
             <View style={styles.moodContainer}>
                 <View style={styles.moodHeader}>
@@ -225,26 +235,6 @@ const styles = StyleSheet.create({
         fontSize: 11,
         color: '#EBEAEC',
         letterSpacing: 0.5,
-    },
-    statsRow: {
-        flexDirection: 'row',
-        gap: 12,
-    },
-    statCard: {
-        flex: 1,
-        borderRadius: 16,
-        padding: 12,
-        minHeight: 110,
-        justifyContent: 'space-between',
-    },
-    statCardPurple: {
-        backgroundColor: '#8E97FD',
-    },
-    statCardOrange: {
-        backgroundColor: '#FFC97E',
-    },
-    statCardTeal: {
-        backgroundColor: '#598E9C',
     },
     moodContainer: {
         borderWidth: 1,
