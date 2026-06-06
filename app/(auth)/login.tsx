@@ -35,7 +35,7 @@ export default function LoginScreen() {
         setLoading(true);
         await new Promise(resolve => setTimeout(resolve, 1500));
         setLoading(false);
-        router.replace('/welcome');
+        router.replace('/mood');
     }
 
     return (

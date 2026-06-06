@@ -54,9 +54,9 @@ export default function MoodScreen() {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                <Text style={styles.title}>Antes de ir,</Text>
+                <Text style={styles.title}>Olá, Usuário!</Text>
                 <Text style={styles.subtitle}>
-                    como está seu humor hoje?
+                    Como está seu humor hoje?
                 </Text>
 
                 <View style={styles.emotions}>

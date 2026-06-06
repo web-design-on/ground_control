@@ -1,4 +1,4 @@
-import WeeklyXPChart from '@/components/Ranking';
+import WeeklyRanking from '@/components/Ranking';
 import RankingParticipantCard from '@/components/RankingParticipantCard';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -12,7 +12,7 @@ export default function RankingScreen() {
                 <Text style={styles.subtitle}>Acompanhe e compita por um melhor score</Text>
             </View>
 
-            <WeeklyXPChart
+            <WeeklyRanking
                 title="XP da semana"
                 participants={[
                     { name: 'Natali S.', xp: [3, 4, 2, 2, 1, 5, 3], color: '#598E9C', isCurrentUser: true },

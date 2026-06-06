@@ -57,7 +57,7 @@ export default function WelcomeScreen() {
             <SafeAreaView style={styles.safe}>
                 <Animated.View style={[styles.content, { opacity: fadeAnim, transform: [{ translateY: slideAnim }] }]}>
                     <Text style={styles.title}>
-                        <Text style={styles.bold}>Olá Breno, bem-vindo{'\n'}</Text>
+                        <Text style={styles.bold}>Olá Usuário, bem-vindo{'\n'}</Text>
                         ao Ground Control
                     </Text>
                     <Text style={styles.subtitle}>
@@ -76,7 +76,7 @@ export default function WelcomeScreen() {
                 <Animated.View style={[styles.bottom, { opacity: fadeAnim }]}>
                     <TouchableOpacity
                         style={styles.button}
-                        onPress={() => router.push('/(tabs)')}
+                        onPress={() => router.push('/mood')}
                         activeOpacity={0.9}
                     >
                         <Text style={styles.buttonText}>COMECE</Text>

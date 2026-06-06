@@ -19,7 +19,7 @@ export default function HomeScreen() {
     return (
         <ScrollView style={styles.scroll} contentContainerStyle={styles.container} showsVerticalScrollIndicator={false}>
             <View>
-                <Text style={styles.mainTitle}>{greeting}, Breno</Text>
+                <Text style={styles.mainTitle}>{greeting}, Usuário</Text>
                 <Text style={styles.subtitle}>Venha completar seus desafios para uma ótima recompensa!</Text>
             </View>
 
