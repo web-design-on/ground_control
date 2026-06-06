@@ -27,6 +27,14 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => ( <Image source={require('../../assets/icons/navigation/home.png')} style={{ width: 24, height: 24, tintColor: color }} /> ),
         }}
       />
+
+      <Tabs.Screen
+        name="ranking"
+        options={{
+          title: 'Ranking',
+          tabBarIcon: ({ color }) => ( <Image source={require('../../assets/icons/navigation/ranking.png')} style={{ width: 24, height: 24, tintColor: color }} /> ),
+        }}
+      />
     </Tabs>
   );
 }

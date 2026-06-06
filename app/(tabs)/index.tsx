@@ -237,8 +237,6 @@ const styles = StyleSheet.create({
         letterSpacing: 0.5,
     },
     moodContainer: {
-        borderWidth: 1,
-        borderColor: '#E6E1F2',
         backgroundColor: '#FFFFFF',
         padding: 16,
         borderRadius: 16,
