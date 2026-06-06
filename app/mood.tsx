@@ -101,28 +101,23 @@ const styles = StyleSheet.create({
         backgroundColor: '#FAF8F5',
         justifyContent: 'center',
     },
-
     header: {
         alignItems: 'center',
         paddingTop: 50,
     },
-
     title: {
         fontSize: 36,
         fontWeight: '700',
     },
-
     subtitle: {
         fontSize: 24,
         marginTop: 4,
     },
-
     emotions: {
         flexDirection: 'row',
         gap: 4,
         marginTop: 20,
     },
-
     illustrationContainer: {
         justifyContent: 'center',
         alignItems: 'center',
@@ -130,7 +125,6 @@ const styles = StyleSheet.create({
         maxHeight: 300,
         marginVertical: 32,
     },
-
     moon: {
         width: '100%',
         height: '100%',
@@ -138,24 +132,20 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         transform: [{ scale: 1.3 }],
     },
-
     emotionIcon: {
         width: 45,
         height: 45,
         borderRadius: 30,
     },
-
     emotionButton: {
         borderRadius: 40,
         padding: 8,
         backgroundColor: 'transparent',
     },
-
     astronaut: {
         width: '100%',
         height: 220,
     },
-
     footer: {
         paddingHorizontal: 24,
         paddingBottom: 40,

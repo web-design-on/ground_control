@@ -14,6 +14,7 @@ export interface HealthStatsCardsProps {
 const CARD_RADIUS = 20;
 const PURPLE = '#8E97FD';
 const ORANGE = '#FFC97E';
+const DARK_BLUE = '#03174C';
 const TEAL = '#598E9C';
 const WHITE = '#FFFFFF';
 const DARK = '#3F414E';
@@ -30,7 +31,7 @@ function ScoreRing({ size, score, max }: ScoreRingProps) {
     const cx = size / 2;
     const cy = size / 2;
     const radius = size / 2 - 10;
-    const strokeWidth = 8;
+    const strokeWidth = 11;
     const pct = Math.min(score / max, 1);
     const sweep = pct * 360;
 
@@ -143,8 +144,8 @@ export default function HealthStatsCards({
     scoreMax = 100,
     sentiment = 'Triste',
     moodBars = DEFAULT_BARS,
-    trackedDays = 31,
-    totalDays = 365,
+    trackedDays = 5,
+    totalDays = 31,
 }: HealthStatsCardsProps) {
     return (
         <ScrollView
@@ -158,10 +159,10 @@ export default function HealthStatsCards({
                     <Text style={styles.cardLabel}>Seu Score</Text>
                 </View>
                 <View style={styles.ringWrapper}>
-                    <ScoreRing size={100} score={score} max={scoreMax} />
+                    <ScoreRing size={130} score={score} max={scoreMax} />
                     <View style={styles.ringOverlay}>
                         <Text style={styles.scoreNumber}>{score}</Text>
-                        <Text style={styles.scoreSubLabel}>Saúde</Text>
+                        <Text style={styles.scoreSubLabel}>Desafios Concluídos</Text>
                     </View>
                 </View>
             </View>
@@ -178,10 +179,27 @@ export default function HealthStatsCards({
             <View style={[styles.card, { backgroundColor: TEAL }]}>
                 <View style={styles.cardHeader}>
                     <Text style={styles.cardIcon}>＋</Text>
-                    <Text style={styles.cardLabel}>Track Diário</Text>
+                    <Text style={styles.cardLabel}>Track Mensal</Text>
                 </View>
                 <Text style={styles.bigValue}>{trackedDays}/{totalDays}</Text>
                 <TrackerGrid completed={trackedDays} total={totalDays} />
+            </View>
+
+            <View style={[styles.card, { backgroundColor: DARK_BLUE }]}>
+                <View style={styles.cardHeader}>
+                    <Text style={styles.cardIcon}>☾</Text>
+                    <Text style={styles.cardLabel}>Sono</Text>
+                </View>
+                <View style={styles.sleepInfoWrapper}>
+                    <View>
+                        <Text style={styles.sleepHoursSubtitle}>Média de</Text>
+                        <Text style={styles.sleepHours}>7h 38min</Text>
+                        <Text style={styles.sleepHoursSubtitle}>por noite</Text>
+                    </View>
+                </View>
+                <View style={styles.cardButton}>
+                    <Text style={styles.cardButtonText}>ALTERAR</Text>
+                </View>
             </View>
         </ScrollView>
     );
@@ -230,16 +248,48 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: '700',
         color: WHITE,
-        lineHeight: 26,
+        lineHeight: 20,
     },
     scoreSubLabel: {
-        fontSize: 11,
-        color: 'rgba(255,255,255,0.85)',
+        fontSize: 9,
+        marginTop: 2,
+        color: WHITE,
     },
     bigValue: {
         fontSize: 22,
         fontWeight: '700',
         color: WHITE,
         marginBottom: 6,
+    },
+    sleepInfoWrapper: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+    },
+    sleepHours: {
+        fontSize: 22,
+        fontWeight: '700',
+        color: WHITE,
+        lineHeight: 26,
+    },
+    sleepHoursSubtitle: {
+        fontSize: 11,
+        color: 'rgba(255,255,255,0.85)',
+    },
+    cardButton: {
+        backgroundColor: 'rgb(255, 255, 255)',
+        borderRadius: 20,
+        paddingHorizontal: 16,
+        paddingVertical: 8,
+        marginTop: 4,
+        width: '100%',
+        alignItems: 'center'
+    },
+    cardButtonText: {
+        fontSize: 11,
+        fontWeight: '700',
+        color: '#333242',
+        letterSpacing: 0.5,
     },
 });

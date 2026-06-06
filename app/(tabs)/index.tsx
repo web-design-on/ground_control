@@ -68,12 +68,12 @@ export default function HomeScreen() {
             <Text style={styles.secondaryTitle}>Acompanhe sua saúde</Text>
 
             <HealthStatsCards
-                score={80}
+                score={32}
                 scoreMax={100}
                 sentiment="Triste"
                 moodBars={[2, 4, 6, 9, 7, 5, 8, 6]}
-                trackedDays={31}
-                totalDays={365}
+                trackedDays={5}
+                totalDays={31}
             />
 
             <View style={styles.moodContainer}>
