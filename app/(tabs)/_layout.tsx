@@ -1,5 +1,6 @@
 import { Tabs } from 'expo-router';
 import { Image } from 'react-native';
+import { Ionicons } from "@expo/vector-icons";
 
 export default function TabLayout() {
   return (
@@ -35,6 +36,14 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => ( <Image source={require('../../assets/icons/navigation/ranking.png')} style={{ width: 24, height: 24, tintColor: color }} /> ),
         }}
       />
+
+<Tabs.Screen
+  name="recompensas"
+  options={{
+    title: 'Recompensas',
+    tabBarIcon: ({ color }) => <Ionicons name="gift-outline" size={24} color={color} />,
+  }}
+/>
     </Tabs>
   );
 }
