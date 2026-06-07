@@ -24,7 +24,7 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => ( <Image source={require('../../assets/icons/navigation/home.png')} style={{ width: 24, height: 24, tintColor: color }} /> ),
+          tabBarIcon: ({ color }) => (<Image source={require('../../assets/icons/navigation/home.png')} style={{ width: 24, height: 24, tintColor: color }} />),
         }}
       />
 
@@ -32,7 +32,15 @@ export default function TabLayout() {
         name="ranking"
         options={{
           title: 'Ranking',
-          tabBarIcon: ({ color }) => ( <Image source={require('../../assets/icons/navigation/ranking.png')} style={{ width: 24, height: 24, tintColor: color }} /> ),
+          tabBarIcon: ({ color }) => (<Image source={require('../../assets/icons/navigation/ranking.png')} style={{ width: 24, height: 24, tintColor: color }} />),
+        }}
+      />
+
+      <Tabs.Screen
+        name="chatbot"
+        options={{
+          title: 'Luminha',
+          tabBarIcon: ({ color }) => (<Image source={require('../../assets/icons/navigation/luminha.png')} style={{ width: 24, height: 24, tintColor: color }} />),
         }}
       />
     </Tabs>

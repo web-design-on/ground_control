@@ -198,7 +198,7 @@ export default function HealthStatsCards({
                     </View>
                 </View>
                 <View style={styles.cardButton}>
-                    <Text style={styles.cardButtonText}>ALTERAR</Text>
+                    <Text style={styles.cardButtonText}>GERENCIAR</Text>
                 </View>
             </View>
         </ScrollView>
