@@ -67,7 +67,7 @@ export default function WelcomeScreen() {
 
                 <Animated.View style={[styles.astronautWrap, { transform: [{ translateY: floatAnim }] }]}>
                     <Image
-                        source={require('../assets/images/astronautaexplicacao.png')}
+                        source={require('../assets/images/astronautwelcome.png')}
                         style={styles.astronaut}
                         resizeMode="contain"
                     />

@@ -51,7 +51,7 @@ export function Input({
                 />
                 {secureTextEntry && (
                     <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                        <Text style={styles.eye}>{showPassword ? '🙈' : '👁'}</Text>
+                        <Text style={styles.eye}>{showPassword ? 'OCULTAR' : 'VER'}</Text>
                     </TouchableOpacity>
                 )}
             </View>
@@ -87,9 +87,12 @@ const styles = StyleSheet.create({
         color: colors.textDark,
     },
     eye: {
-        fontSize: 16,
-        padding: 4,
-    },
+    fontSize: 11,
+    fontWeight: '600',
+    color: colors.textLight,
+    padding: 4,
+    letterSpacing: 0.5,
+},
     error: {
         marginTop: 4,
         fontSize: 12,

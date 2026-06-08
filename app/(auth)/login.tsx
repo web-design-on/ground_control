@@ -61,12 +61,12 @@ export default function LoginScreen() {
                         <Text style={styles.title}>Bem-vindo de volta!</Text>
 
                         <TouchableOpacity style={styles.facebookBtn} onPress={() => { }}>
-                            <Image source={require('../../assets/images/fece.png')} style={styles.socialIcon} resizeMode="contain" />
+                            <Image source={require('../../assets/icons/social/facebook.png')} style={styles.socialIcon} resizeMode="contain" />
                             <Text style={styles.facebookText}>CONTINUE COM FACEBOOK</Text>
                         </TouchableOpacity>
 
                         <TouchableOpacity style={styles.googleBtn} onPress={() => { }}>
-                            <Image source={require('../../assets/images/google.png')} style={styles.socialIcon} resizeMode="contain" />
+                            <Image source={require('../../assets/icons/social/google.png')} style={styles.socialIcon} resizeMode="contain" />
                             <Text style={styles.googleText}>CONTINUE COM GOOGLE</Text>
                         </TouchableOpacity>
 
