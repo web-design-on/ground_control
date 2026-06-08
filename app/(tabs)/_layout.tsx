@@ -41,7 +41,7 @@ export default function TabLayout() {
         name="recompensas"
         options={{
           title: 'Recompensas',
-          tabBarIcon: ({ color }) => <Ionicons name="gift-outline" size={24} color={color} />,
+          tabBarIcon: ({ color }) => <Ionicons name="ribbon" size={24} color={color} />,
         }}
       />
 
