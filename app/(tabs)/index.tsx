@@ -1,5 +1,6 @@
 import HealthStatsCards from '@/components/HealthStatsCards';
-import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { useRouter } from 'expo-router';
+import { Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 function getTimeGreeting(): string {
     const hour = new Date().getHours();
@@ -14,6 +15,7 @@ function getTimeGreeting(): string {
 }
 
 export default function HomeScreen() {
+    const router = useRouter();
     const greeting = getTimeGreeting();
 
     return (
@@ -45,9 +47,14 @@ export default function HomeScreen() {
                     />
                     <Text style={styles.cardTitleDark}>Relaxamento</Text>
                     <Text style={styles.cardCategoryDark}>RESPIRAÇÃO  •  3-10 MIN</Text>
-                    <View style={styles.cardButtonDark}>
+                    <Pressable
+                        onPress={() => router.push('/atividades')}
+                        style={styles.cardButtonDark}
+                        accessibilityRole="button"
+                        accessibilityLabel="Iniciar atividade de relaxamento"
+                    >
                         <Text style={styles.cardButtonTextDark}>INICIAR</Text>
-                    </View>
+                    </Pressable>
                 </View>
             </View>
 

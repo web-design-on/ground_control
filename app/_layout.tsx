@@ -10,6 +10,8 @@ export default function RootLayout() {
       <Stack.Screen name="(auth)" />
       <Stack.Screen name="(tabs)" />
       <Stack.Screen name="player" />
+      <Stack.Screen name="atividades" />
+      <Stack.Screen name="meditacao" />
     </Stack>
   );
 }
