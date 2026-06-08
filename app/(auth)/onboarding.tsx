@@ -29,7 +29,7 @@ export default function OnboardingScreen() {
                         resizeMode="contain"
                     />
                     <Image
-                        source={require('../../assets/images/astronautaok.png')}
+                        source={require('../../assets/images/astronautonboarding.png')}
                         style={styles.astronaut}
                         resizeMode="contain"
                     />
