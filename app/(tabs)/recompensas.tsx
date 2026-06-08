@@ -1,26 +1,26 @@
-import React, { useState, useRef } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  ScrollView,
-  SafeAreaView,
-  StatusBar,
-  Animated,
-} from 'react-native';
-import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+import React, { useRef, useState } from 'react';
+import {
+  Animated,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { colors } from '../../constants/theme';
 
 const VIDEOS = [
-  { id: '1', title: 'Vamos escutar uma música?', reward: 'RECOMPENSA: GRK 13/13' },
-  { id: '2', title: 'Que susto ou quase isso!', reward: 'RECOMPENSA: GRK 24/86' },
-  { id: '3', title: 'Video especial', reward: 'RECOMPENSA: GRK 20/10' },
-  { id: '4', title: 'Morrendo de rir', reward: 'RECOMPENSA: GRK 34/69' },
-  { id: '5', title: 'Ovnn...', reward: 'RECOMPENSA: GRK 12/7' },
-  { id: '6', title: 'Só no Brasil', reward: 'RECOMPENSA: GRK 23/57' },
-  { id: '7', title: 'Mais um dia em MG', reward: 'RECOMPENSA: GRK 38/27' },
+  { id: '1', title: 'Vamos escutar uma música?', reward: 'RECOMPENSA DIA 12/06' },
+  { id: '2', title: 'Que susto ou quase isso!', reward: 'RECOMPENSA: DIA 24/06' },
+  { id: '3', title: 'Video especial', reward: 'RECOMPENSA: DIA 30/06' },
+  { id: '4', title: 'Morrendo de rir', reward: 'RECOMPENSA: DIA 03/07' },
+  { id: '5', title: 'Ovnn...', reward: 'RECOMPENSA: DIA 12/07' },
+  { id: '6', title: 'Só no Brasil', reward: 'RECOMPENSA: DIA 23/07' },
+  { id: '7', title: 'Mais um dia em MG', reward: 'RECOMPENSA: DIA 30/07' },
 ];
 
 type HistoryType = 'recompensa' | 'atividade' | 'conquista' | 'streak';
@@ -130,9 +130,8 @@ export default function Recompensas() {
 
       {/* Header */}
       <View style={styles.header}>
-        <Text style={styles.label}>recompensa</Text>
         <Text style={styles.title}>A hora chegou...</Text>
-        <Text style={styles.subtitle}>Retire e acrescente suas recompensas</Text>
+        <Text style={styles.subtitle}>Retire e aproveite suas recompensas</Text>
       </View>
 
       {/* Tabs */}
