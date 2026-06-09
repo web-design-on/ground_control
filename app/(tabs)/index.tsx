@@ -1,4 +1,5 @@
 import HealthStatsCards from '@/components/HealthStatsCards';
+import { colors } from '@/constants/theme';
 import { useRouter } from 'expo-router';
 import { Image, ImageBackground, Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 
@@ -110,7 +111,7 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
     scroll: {
-        backgroundColor: '#FAF8F5',
+        backgroundColor: colors.lightGray,
     },
     container: {
         paddingHorizontal: 24,
@@ -121,18 +122,18 @@ const styles = StyleSheet.create({
     mainTitle: {
         fontSize: 28,
         fontWeight: '700',
-        color: '#3F414E',
+        color: colors.textDark,
         marginBottom: 4,
     },
     subtitle: {
-        color: '#A1A4B2',
+        color: colors.textLight,
         fontSize: 16,
         lineHeight: 22,
     },
     secondaryTitle: {
         fontSize: 20,
         fontWeight: '600',
-        color: '#3F414E',
+        color: colors.textDark,
         marginTop: 4,
     },
     activitiesContainer: {
@@ -143,7 +144,7 @@ const styles = StyleSheet.create({
     selfCare: {
         flex: 1,
         borderRadius: 16,
-        backgroundColor: '#8E97FD',
+        backgroundColor: colors.primary,
         padding: 16,
         minHeight: 180,
         justifyContent: 'flex-end',
@@ -152,7 +153,7 @@ const styles = StyleSheet.create({
     relaxation: {
         flex: 1,
         borderRadius: 16,
-        backgroundColor: '#FFC97E',
+        backgroundColor: colors.yellow,
         padding: 16,
         minHeight: 180,
         justifyContent: 'flex-end',
@@ -168,32 +169,32 @@ const styles = StyleSheet.create({
     cardTitle: {
         fontSize: 16,
         fontWeight: '700',
-        color: '#FFFFFF',
+        color: colors.white,
         marginBottom: 2,
     },
     cardTitleDark: {
         fontSize: 16,
         fontWeight: '700',
-        color: '#3F414E',
+        color: colors.textDark,
         marginBottom: 2,
     },
     cardCategoryDark: {
         fontSize: 9,
         fontWeight: '600',
-        color: 'rgba(63,65,78,0.8)',
+        color: colors.textDark,
         letterSpacing: 0.8,
         marginBottom: 16,
     },
     cardCategory: {
         fontSize: 9,
         fontWeight: '600',
-        color: 'rgba(255,255,255,0.8)',
+        color: colors.white,
         letterSpacing: 0.8,
         marginBottom: 16,
     },
     cardButton: {
         alignSelf: 'flex-end',
-        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundColor: colors.white,
         borderRadius: 20,
         paddingHorizontal: 16,
         paddingVertical: 8,
@@ -201,7 +202,7 @@ const styles = StyleSheet.create({
     },
     cardButtonDark: {
         alignSelf: 'flex-end',
-        backgroundColor: '#3F414E',
+        backgroundColor: colors.darkGray,
         borderRadius: 20,
         paddingHorizontal: 16,
         paddingVertical: 8,
@@ -210,17 +211,17 @@ const styles = StyleSheet.create({
     cardButtonText: {
         fontSize: 11,
         fontWeight: '700',
-        color: '#333242',
+        color: colors.textDark,
         letterSpacing: 0.5,
     },
     cardButtonTextDark: {
         fontSize: 11,
         fontWeight: '700',
-        color: '#FFFFFF',
+        color: colors.white,
         letterSpacing: 0.5,
     },
     thought: {
-        backgroundColor: '#333242',
+        backgroundColor: colors.darkGray,
         borderRadius: 12,
         padding: 24,
     },
@@ -235,18 +236,20 @@ const styles = StyleSheet.create({
     thoughtTitle: {
         fontSize: 16,
         fontWeight: '700',
-        color: '#FFFFFF',
+        color: colors.white,
         marginBottom: 4,
     },
     thoughtMetaText: {
         fontSize: 11,
-        color: '#EBEAEC',
+        color: colors.white,
         letterSpacing: 0.5,
     },
     moodContainer: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: colors.white,
         padding: 16,
         borderRadius: 16,
+        borderWidth: 1,
+        borderColor: colors.border
     },
     moodHeader: {
         flexDirection: 'row',
@@ -257,7 +260,7 @@ const styles = StyleSheet.create({
     moodTitle: {
         fontSize: 15,
         fontWeight: '600',
-        color: '#3F414E',
+        color: colors.textDark,
     },
     moodRow: {
         flexDirection: 'row',
@@ -274,6 +277,6 @@ const styles = StyleSheet.create({
     },
     moodDay: {
         fontSize: 12,
-        color: '#A1A4B2',
+        color: colors.textLight,
     },
 });

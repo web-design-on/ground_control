@@ -14,7 +14,7 @@ export default function AtividadesScreen() {
     <View style={styles.container}>
       <View style={styles.content}>
         <Text style={styles.greeting}>
-          Olá Breno, hoje
+          Olá Usuário, hoje
         </Text>
 
         <Text style={styles.title}>
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: colors.primary,
+    paddingBottom: 32,
   },
 
   content: {

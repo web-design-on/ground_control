@@ -68,7 +68,9 @@ export default function OnboardingScreen() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.background,
+        backgroundColor: colors.background,     
+        paddingTop: 52,
+        paddingBottom: 32,
     },
     safe: {
         flex: 1,
@@ -82,8 +84,7 @@ const styles = StyleSheet.create({
     logo: {
         width: 160,
         height: 70,
-        marginTop: 24,
-        marginBottom: 52,
+        marginBottom: 40,
     },
     astronaut: {
         width: width * 1.70,
@@ -96,11 +97,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: 22,
+        fontSize: 20,
         fontWeight: '800',
         color: colors.navy,
         textAlign: 'center',
-        marginBottom: 30,
+        marginBottom: 16,
     },
     description: {
         fontSize: 14,

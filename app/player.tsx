@@ -1,16 +1,16 @@
-import React, { useState, useRef, useEffect } from 'react';
-import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  SafeAreaView,
-  StatusBar,
-  Dimensions,
-} from 'react-native';
-import { useRouter } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import Slider from '@react-native-community/slider';
+import { useRouter } from 'expo-router';
+import React, { useEffect, useRef, useState } from 'react';
+import {
+  Dimensions,
+  SafeAreaView,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import { colors } from '../constants/theme';
 
 const { width } = Dimensions.get('window');
@@ -146,6 +146,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.navy,
     paddingHorizontal: 24,
+    paddingTop: 52,
   },
   topBar: {
     flexDirection: 'row',

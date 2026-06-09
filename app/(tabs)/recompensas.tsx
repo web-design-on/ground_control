@@ -1,16 +1,15 @@
-import React, { useState, useRef } from 'react';
+import { Ionicons } from '@expo/vector-icons';
+import { useRouter } from 'expo-router';
+import React, { useRef, useState } from 'react';
 import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
+  Animated,
   ScrollView,
   StatusBar,
-  Animated,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRouter } from 'expo-router';
-import { Ionicons } from '@expo/vector-icons';
 import { colors } from '../../constants/theme';
 
 const VIDEOS = [
@@ -66,7 +65,7 @@ export default function Recompensas() {
   const items = activeTab === 'video' ? VIDEOS : NOTICIAS;
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor={colors.white} />
 
       {/* Header */}
@@ -135,24 +134,24 @@ export default function Recompensas() {
         <Text style={styles.toastText}>Conclua mais atividades para desbloquear</Text>
       </Animated.View>
 
-    </SafeAreaView>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colors.white,
+    backgroundColor: colors.lightGray,
   },
   header: {
-    paddingHorizontal: 20,
-    paddingTop: 20,
-    paddingBottom: 16,
+    paddingHorizontal: 24,
+    paddingTop: 52,
+    paddingBottom: 32,
   },
   title: {
     fontSize: 28,
     fontWeight: '700',
-    color: colors.navy,
+    color: colors.textDark,
     marginBottom: 4,
   },
   subtitle: {
@@ -194,7 +193,7 @@ const styles = StyleSheet.create({
   },
   list: {
     flex: 1,
-    paddingHorizontal: 20,
+    paddingHorizontal: 24,
   },
   listItem: {
     flexDirection: 'row',

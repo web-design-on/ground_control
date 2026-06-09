@@ -1,3 +1,4 @@
+import { colors } from '@/constants/theme';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 
@@ -53,12 +54,6 @@ export function ChatBubbleList({ messages }: ChatBubbleListProps) {
     );
 }
 
-const BOT_BUBBLE_BG = '#F5C17A';
-const BOT_TEXT = '#4A2E00';
-const USER_BUBBLE_BG = '#FFFFFF';
-const USER_TEXT = '#3F414E';
-const BOT_AVATAR_BG = '#8E97FD';
-
 const styles = StyleSheet.create({
     list: {
         gap: 20,
@@ -80,26 +75,28 @@ const styles = StyleSheet.create({
         paddingVertical: 12,
     },
     bubbleUser: {
-        backgroundColor: USER_BUBBLE_BG,
+        backgroundColor: colors.white,
         borderRadius: 18,
         borderBottomRightRadius: 4,
         borderWidth: 1,
-        borderColor: '#E6E1F2',
+        borderColor: colors.border,
     },
     bubbleBot: {
-        backgroundColor: BOT_BUBBLE_BG,
+        backgroundColor: colors.yellow,
         borderRadius: 18,
         borderBottomLeftRadius: 4,
+           borderWidth: 1,
+        borderColor: colors.border,
     },
     text: {
         fontSize: 14,
         lineHeight: 21,
     },
     textUser: {
-        color: USER_TEXT,
+        color: colors.textDark,
     },
     textBot: {
-        color: BOT_TEXT,
+        color: colors.textDark,
     },
     meta: {
         flexDirection: 'row',
@@ -117,7 +114,7 @@ const styles = StyleSheet.create({
         width: 22,
         height: 22,
         borderRadius: 20,
-        backgroundColor: BOT_AVATAR_BG,
+        backgroundColor: colors.primary,
         alignItems: 'center',
         justifyContent: 'center',
         padding: 4,
@@ -125,11 +122,11 @@ const styles = StyleSheet.create({
     botAvatarText: {
         fontSize: 8,
         fontWeight: '700',
-        color: '#FFFFFF',
+        color: colors.white,
         letterSpacing: 0.3,
     },
     time: {
         fontSize: 11,
-        color: '#A1A4B2',
+        color: colors.textLight,
     },
 });

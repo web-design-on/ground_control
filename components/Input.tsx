@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import {
-    View,
-    TextInput,
-    Text,
+    Image,
     StyleSheet,
+    Text,
+    TextInput,
     TouchableOpacity,
+    View
 } from 'react-native';
 import { colors } from '../constants/theme';
 
@@ -51,7 +52,7 @@ export function Input({
                 />
                 {secureTextEntry && (
                     <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
-                        <Text style={styles.eye}>{showPassword ? 'OCULTAR' : 'VER'}</Text>
+                        <Text style={styles.eye}>{showPassword ? <Image source={require('../assets/icons/input/visibility_off.png')} style={styles.visibilityIcon}/> : <Image source={require('../assets/icons/input/visibility.png')} style={styles.visibilityIcon}/>}</Text>
                     </TouchableOpacity>
                 )}
             </View>
@@ -99,4 +100,8 @@ const styles = StyleSheet.create({
         color: '#E53E3E',
         fontWeight: '500',
     },
+    visibilityIcon: {
+        width: 20,
+        height: 20,
+    }
 });

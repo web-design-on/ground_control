@@ -5,13 +5,12 @@ import {
     Image,
     KeyboardAvoidingView,
     Platform,
-    SafeAreaView,
     ScrollView,
     StatusBar,
     StyleSheet,
     Text,
     TouchableOpacity,
-    View,
+    View
 } from 'react-native';
 import { PrimaryButton } from '../../components/Button';
 import { Input } from '../../components/Input';
@@ -44,7 +43,7 @@ export default function LoginScreen() {
             <View style={styles.curveTopRight} />
             <View style={styles.curveBottomLeft} />
 
-            <SafeAreaView style={styles.safe}>
+            <View style={styles.safe}>
                 <KeyboardAvoidingView
                     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                     style={{ flex: 1 }}
@@ -58,7 +57,7 @@ export default function LoginScreen() {
                             <Text style={styles.backArrow}>←</Text>
                         </TouchableOpacity>
 
-                        <Text style={styles.title}>Bem-vindo de volta!</Text>
+                        <Text style={styles.title}>Bom te ver por aqui!</Text>
 
                         <TouchableOpacity style={styles.facebookBtn} onPress={() => { }}>
                             <Image source={require('../../assets/icons/social/facebook.png')} style={styles.socialIcon} resizeMode="contain" />
@@ -111,7 +110,7 @@ export default function LoginScreen() {
                         </TouchableOpacity>
                     </ScrollView>
                 </KeyboardAvoidingView>
-            </SafeAreaView>
+            </View>
         </View>
     );
 }
@@ -120,11 +119,13 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.background,
+        paddingTop: 52,
+        paddingBottom: 32,
     },
     safe: { flex: 1 },
     scroll: {
-        paddingHorizontal: 32,
-        paddingBottom: 48,
+        paddingHorizontal: 24,
+
     },
     curveTopRight: {
         position: 'absolute',
@@ -146,8 +147,7 @@ const styles = StyleSheet.create({
         transform: [{ rotate: '20deg' }],
     },
     backBtn: {
-        marginTop: 60,
-        marginBottom: 50,
+        marginBottom: 32,
         alignSelf: 'flex-start',
     },
     backArrow: {
@@ -170,7 +170,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        marginBottom: 27,
+        marginBottom: 16,
         gap: 10,
     },
     facebookText: {
@@ -187,7 +187,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        marginBottom: 12,
         borderWidth: 1.5,
         borderColor: colors.border,
         gap: 10,
@@ -223,7 +222,7 @@ const styles = StyleSheet.create({
         marginTop: 16,
     },
     forgotText: {
-        fontSize: 13,
+        fontSize: 14,
         color: colors.textMedium,
     },
     registerLink: {
@@ -234,7 +233,7 @@ const styles = StyleSheet.create({
         borderTopColor: colors.border,
     },
     registerLinkText: {
-        fontSize: 11,
+        fontSize: 12,
         color: colors.textLight,
         letterSpacing: 0.5,
     },

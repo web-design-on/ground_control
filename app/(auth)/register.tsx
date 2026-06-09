@@ -4,13 +4,12 @@ import {
     Image,
     KeyboardAvoidingView,
     Platform,
-    SafeAreaView,
     ScrollView,
     StatusBar,
     StyleSheet,
     Text,
     TouchableOpacity,
-    View,
+    View
 } from 'react-native';
 import { PrimaryButton } from '../../components/Button';
 import { Input } from '../../components/Input';
@@ -45,7 +44,9 @@ export default function RegisterScreen() {
     return (
         <View style={styles.container}>
             <StatusBar barStyle="dark-content" />
-            <SafeAreaView style={styles.safe}>
+                 <View style={styles.curveTopRight} />
+                        <View style={styles.curveBottomLeft} />
+            <View style={styles.safe}>
                 <KeyboardAvoidingView
                     behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
                     style={{ flex: 1 }}
@@ -55,7 +56,11 @@ export default function RegisterScreen() {
                         showsVerticalScrollIndicator={false}
                         keyboardShouldPersistTaps="handled"
                     >
-                        <Text style={styles.titleRegister}>Criar conta</Text>
+                        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
+                            <Text style={styles.backArrow}>←</Text>
+                        </TouchableOpacity>
+
+                        <Text style={styles.titleRegister}>Boas-vindas!</Text>
 
                         <TouchableOpacity style={styles.facebookBtn} onPress={() => { }}>
                             <Image source={require('../../assets/icons/social/facebook.png')} style={styles.socialIcon} resizeMode="contain" />
@@ -88,7 +93,7 @@ export default function RegisterScreen() {
                         </TouchableOpacity>
                     </ScrollView>
                 </KeyboardAvoidingView>
-            </SafeAreaView>
+            </View>
         </View>
     );
 }
@@ -100,16 +105,43 @@ const styles = StyleSheet.create({
     },
     safe: { flex: 1 },
     scroll: {
-        paddingHorizontal: 32,
-        paddingBottom: 48,
+        paddingHorizontal: 24,
+        paddingTop: 32,
+        paddingBottom: 32,
+    },
+        curveTopRight: {
+        position: 'absolute',
+        top: -100,
+        right: -100,
+        width: 280,
+        height: 280,
+        borderRadius: 140,
+        backgroundColor: 'rgba(235,227,210,0.5)',
+    },
+    curveBottomLeft: {
+        position: 'absolute',
+        bottom: -80,
+        left: -80,
+        width: 240,
+        height: 180,
+        borderRadius: 120,
+        backgroundColor: 'rgba(235,227,210,0.4)',
+        transform: [{ rotate: '20deg' }],
     },
     titleRegister: {
         fontSize: 28,
         fontWeight: '800',
         color: colors.navy,
-        marginTop: 70,
         textAlign: 'center',
-        marginBottom: 62,
+        marginBottom: 24,
+    },
+    backBtn: {
+        alignSelf: 'flex-start',
+    },
+    backArrow: {
+        fontSize: 40,
+        color: colors.navy,
+        fontWeight: '600',
     },
     facebookBtn: {
         backgroundColor: colors.facebook,
@@ -119,7 +151,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        marginBottom: 12,
+        marginBottom: 16,
         gap: 10,
     },
     facebookText: {
@@ -136,7 +168,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        marginBottom: 12,
         borderWidth: 1.5,
         borderColor: colors.border,
         gap: 10,
@@ -154,8 +185,7 @@ const styles = StyleSheet.create({
     divider: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 24,
-        marginTop: 8,
+        marginVertical: 24,
         width: '100%',
     },
     line: {
@@ -177,6 +207,11 @@ const styles = StyleSheet.create({
         fontSize: 12,
         color: colors.textLight,
         letterSpacing: 0.5,
+         paddingTop: 16,
+        borderTopWidth: 1,
+        borderTopColor: colors.border,
+        width: '100%',
+        textAlign: 'center',
     },
     loginLinkBold: {
         color: colors.link,

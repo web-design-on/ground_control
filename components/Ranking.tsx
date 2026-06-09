@@ -1,3 +1,4 @@
+import { colors } from '@/constants/theme';
 import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
 import { LineChart } from 'react-native-gifted-charts';
@@ -85,15 +86,17 @@ export default function WeeklyRanking({
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: colors.white,
         borderRadius: 16,
         paddingVertical: 16,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        borderWidth: 1,
+        borderColor: colors.border
     },
     title: {
         fontSize: 16,
         fontWeight: '600',
-        color: '#3F414E',
+        color: colors.textDark,
         marginBottom: 12,
     },
     legendContainer: {
@@ -118,11 +121,11 @@ const styles = StyleSheet.create({
     legendName: {
         fontSize: 13,
         fontWeight: '600',
-        color: '#3F414E',
+        color: colors.textDark,
     },
     legendNameMuted: {
         fontWeight: '400',
-        color: '#A1A4B2',
+        color: colors.textLight,
     },
     legendXP: {
         fontSize: 13,
@@ -130,7 +133,7 @@ const styles = StyleSheet.create({
     },
     axisLabel: {
         fontSize: 11,
-        color: '#A1A4B2',
+        color: colors.textLight,
     },
     rankingInfoContainer: {
         paddingHorizontal: 16,

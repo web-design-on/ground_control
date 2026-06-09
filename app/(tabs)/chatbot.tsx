@@ -1,5 +1,6 @@
 import { ChatBubbleList } from "@/components/ChatBubble";
 import { Input } from "@/components/Input";
+import { colors } from "@/constants/theme";
 import { useRef } from "react";
 import {
     Image,
@@ -88,11 +89,11 @@ const scrollRef = useRef<ScrollView>(null);
 const styles = StyleSheet.create({
     root: {
         flex: 1,
-        backgroundColor: "#FAF8F5",
+        backgroundColor: colors.lightGray,
         marginTop: 32,
     },
     header: {
-        backgroundColor: "#8E97FD",
+        backgroundColor: colors.primary,
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
         height: 48,
     },
     headerTitle: {
-        color: "#FFFFFF",
+        color: colors.white,
         fontSize: 32,
         fontWeight: "600",
     },
@@ -122,16 +123,16 @@ const styles = StyleSheet.create({
         alignItems: "center",
         gap: 16,
         paddingHorizontal: 24,
-        backgroundColor: "#ffffff",
+        backgroundColor: colors.white,
         paddingTop: 16,
         borderTopWidth: 1,
-        borderTopColor: "#E6E1F2",
+        borderTopColor: colors.border,
     },
     inputWrapper: {
         flex: 1,
     },
     sendButton: {
-        backgroundColor: "#8E97FD",
+        backgroundColor: colors.primary,
         width: 50,
         height: 50,
         borderRadius: 8,

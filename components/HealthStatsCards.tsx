@@ -1,3 +1,4 @@
+import { colors } from '@/constants/theme';
 import { Canvas, Path, Skia } from '@shopify/react-native-skia';
 import React from 'react';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -10,16 +11,6 @@ export interface HealthStatsCardsProps {
     trackedDays?: number;
     totalDays?: number;
 }
-
-const CARD_RADIUS = 20;
-const PURPLE = '#8E97FD';
-const ORANGE = '#FFC97E';
-const DARK_BLUE = '#03174C';
-const TEAL = '#598E9C';
-const WHITE = '#FFFFFF';
-const DARK = '#3F414E';
-const WHITE_MUTED = 'rgba(255,255,255,0.3)';
-const WHITE_ACTIVE = 'rgba(255,255,255,0.9)';
 
 interface ScoreRingProps {
     size: number;
@@ -42,13 +33,13 @@ function ScoreRing({ size, score, max }: ScoreRingProps) {
     arcPath.addArc({ x: cx - radius, y: cy - radius, width: radius * 2, height: radius * 2 }, -90, sweep);
 
     const trackPaint = Skia.Paint();
-    trackPaint.setColor(Skia.Color(DARK));
+    trackPaint.setColor(Skia.Color(colors.darkGray));
     trackPaint.setStyle(1);
     trackPaint.setStrokeWidth(strokeWidth);
     trackPaint.setAntiAlias(true);
 
     const arcPaint = Skia.Paint();
-    arcPaint.setColor(Skia.Color(WHITE));
+    arcPaint.setColor(Skia.Color(colors.white));
     arcPaint.setStyle(1);
     arcPaint.setStrokeWidth(strokeWidth);
     arcPaint.setStrokeCap(1);
@@ -130,10 +121,10 @@ const trackerStyles = StyleSheet.create({
         width: 14,
         height: 14,
         borderRadius: 4,
-        backgroundColor: WHITE_MUTED,
+        backgroundColor: 'rgba(255, 255, 255, 0.6)',
     },
     dotActive: {
-        backgroundColor: WHITE_ACTIVE,
+        backgroundColor: colors.white,
     },
 });
 
@@ -153,7 +144,7 @@ export default function HealthStatsCards({
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={styles.scrollContent}
         >
-            <View style={[styles.card, { backgroundColor: PURPLE }]}>
+            <View style={[styles.card, { backgroundColor: colors.primary }]}>
                 <View style={styles.cardHeader}>
                     <Text style={styles.cardIcon}>♡</Text>
                     <Text style={styles.cardLabel}>Seu Score</Text>
@@ -167,7 +158,7 @@ export default function HealthStatsCards({
                 </View>
             </View>
 
-            <View style={[styles.card, { backgroundColor: ORANGE }]}>
+            <View style={[styles.card, { backgroundColor: colors.yellow }]}>
                 <View style={styles.cardHeader}>
                     <Text style={styles.cardIcon}>☹</Text>
                     <Text style={styles.cardLabel}>Sentimento</Text>
@@ -176,7 +167,7 @@ export default function HealthStatsCards({
                 <MoodBars bars={moodBars} height={70} />
             </View>
 
-            <View style={[styles.card, { backgroundColor: TEAL }]}>
+            <View style={[styles.card, { backgroundColor: colors.teal }]}>
                 <View style={styles.cardHeader}>
                     <Text style={styles.cardIcon}>＋</Text>
                     <Text style={styles.cardLabel}>Track Mensal</Text>
@@ -185,7 +176,7 @@ export default function HealthStatsCards({
                 <TrackerGrid completed={trackedDays} total={totalDays} />
             </View>
 
-            <View style={[styles.card, { backgroundColor: DARK_BLUE }]}>
+            <View style={[styles.card, { backgroundColor: colors.navy }]}>
                 <View style={styles.cardHeader}>
                     <Text style={styles.cardIcon}>☾</Text>
                     <Text style={styles.cardLabel}>Sono</Text>
@@ -214,7 +205,7 @@ const styles = StyleSheet.create({
     },
     card: {
         width: 140,
-        borderRadius: CARD_RADIUS,
+        borderRadius: 20,
         padding: 14,
         height: 180,
     },
@@ -226,12 +217,12 @@ const styles = StyleSheet.create({
     },
     cardIcon: {
         fontSize: 14,
-        color: 'rgba(255,255,255,0.9)',
+        color: colors.white,
     },
     cardLabel: {
         fontSize: 12,
         fontWeight: '600',
-        color: 'rgba(255,255,255,0.9)',
+        color: colors.white,
     },
     ringWrapper: {
         flex: 1,
@@ -247,18 +238,18 @@ const styles = StyleSheet.create({
     scoreNumber: {
         fontSize: 22,
         fontWeight: '700',
-        color: WHITE,
+        color: colors.white,
         lineHeight: 20,
     },
     scoreSubLabel: {
         fontSize: 9,
         marginTop: 2,
-        color: WHITE,
+        color: colors.white,
     },
     bigValue: {
         fontSize: 22,
         fontWeight: '700',
-        color: WHITE,
+        color: colors.white,
         marginBottom: 6,
     },
     sleepInfoWrapper: {
@@ -270,15 +261,15 @@ const styles = StyleSheet.create({
     sleepHours: {
         fontSize: 22,
         fontWeight: '700',
-        color: WHITE,
+        color: colors.white,
         lineHeight: 26,
     },
     sleepHoursSubtitle: {
         fontSize: 11,
-        color: 'rgba(255,255,255,0.85)',
+        color: colors.white,
     },
     cardButton: {
-        backgroundColor: 'rgb(255, 255, 255)',
+        backgroundColor: colors.white,
         borderRadius: 20,
         paddingHorizontal: 16,
         paddingVertical: 8,
@@ -289,7 +280,7 @@ const styles = StyleSheet.create({
     cardButtonText: {
         fontSize: 11,
         fontWeight: '700',
-        color: '#333242',
+        color: colors.textDark,
         letterSpacing: 0.5,
     },
 });

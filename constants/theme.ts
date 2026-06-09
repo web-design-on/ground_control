@@ -2,11 +2,14 @@ export const colors = {
     // Neutras
     gray: '#A0A3B1',
     beige: '#FAF8F5',
+    lightGray: '#fcfcfc',
+    darkGray: '#3F414E',
 
     // Primárias
     navy: '#03174C',
     primary: '#8E97FD',
     yellow: '#FFC97E',
+    teal: '#598E9C',
 
     // Texto
     textDark: '#3F414E',

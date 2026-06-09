@@ -1,5 +1,6 @@
 import WeeklyRanking from '@/components/Ranking';
 import RankingParticipantCard from '@/components/RankingParticipantCard';
+import { colors } from '@/constants/theme';
 import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 
@@ -15,9 +16,9 @@ export default function RankingScreen() {
             <WeeklyRanking
                 title="XP da semana"
                 participants={[
-                    { name: 'Natali S.', xp: [3, 4, 2, 2, 1, 5, 3], color: '#598E9C', isCurrentUser: true },
-                    { name: 'Maria L.', xp: [1, 2, 2, 4, 4, 2, 3], color: '#8E97FD' },
-                    { name: 'João P.', xp: [1, 3, 2, 1, 3, 3, 2], color: '#FFC97E' },
+                    { name: 'Natali S.', xp: [3, 4, 2, 2, 1, 5, 3], color: colors.teal, isCurrentUser: true },
+                    { name: 'Maria L.', xp: [1, 2, 2, 4, 4, 2, 3], color: colors.primary },
+                    { name: 'João P.', xp: [1, 3, 2, 1, 3, 3, 2], color: colors.yellow },
                 ]}
             />
 
@@ -52,7 +53,7 @@ export default function RankingScreen() {
 
 const styles = StyleSheet.create({
     scroll: {
-        backgroundColor: '#FAF8F5',
+        backgroundColor: colors.lightGray,
     },
     container: {
         paddingHorizontal: 24,
@@ -63,18 +64,18 @@ const styles = StyleSheet.create({
     mainTitle: {
         fontSize: 28,
         fontWeight: '700',
-        color: '#3F414E',
+        color: colors.textDark,
         marginBottom: 4,
     },
     subtitle: {
-        color: '#A1A4B2',
+        color: colors.textLight,
         fontSize: 16,
         lineHeight: 22,
     },
     secondaryTitle: {
         fontSize: 20,
         fontWeight: '600',
-        color: '#3F414E',
+        color: colors.textDark,
         marginTop: 4,
     },
 });
