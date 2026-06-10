@@ -1,50 +1,63 @@
-# Welcome to your Expo app 👋
+# 🌔 Ground Control
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+> O Ground Control, desenvolvido para o desafio do Global Solution de 2026 da FIAP, consiste em um aplicativo de saúde mental e bem-estar voltado para astronautas em missões espaciais de longa duração. A solução foi criada para auxiliar usuários que enfrentam situações de
+isolamento prolongado, rotina intensa e desafios emocionais, oferecendo ferramentas para acompanhamento do humor, práticas de relaxamento,
+desenvolvimento de hábitos saudáveis e incentivo ao autocuidado.
 
-## Get started
+---
 
-1. Install dependencies
+## 🚀 Tecnologias Utilizadas
+- **React Native** – Framework para desenvolvimento de aplicativos móveis multiplataforma.
+- **Expo** – Ferramenta que simplifica o desenvolvimento, build e testes de apps React Native.
+- **TypeScript** – Superset do JavaScript que adiciona tipagem estática, aumentando a segurança e manutenção do código.
+
+---
+
+## 🎨 Decisões de Interface e Organização do App
+
+O design do aplicativo foi desenvolvido com foco em transmitir acolhimento, tranquilidade e segurança. Para isso, utilizamos uma identidade visual inspirada no universo espacial, combinando elementos lúdicos, ilustrações amigáveis e uma paleta de cores suaves composta principalmente por tons de azul, roxo e bege, que são associadas a calma, estabilidade emocional e confiança.
+
+Também incorporamos elementos de gamificação, como rankings e recompensas, com o objetivo de incentivar o engajamento contínuo e a criaçãode hábitos saudáveis. Além disso, recursos visuais como gráficos de humor, indicadores de progresso e atividades guiadas ajudam o usuário a compreender sua evolução emocional de maneira clara e motivadora.
+
+---
+
+## 🗂️ Estrutura do Projeto
+```
+app/
+├── (auth) / # Telas relacionadas a autenticação
+├── (tabs) / # Telas principais e menu de navegação
+├── Telas que compõem fluxos mais específicos
+│
+assets/ # Imagens e ícones
+│
+components/ # Componentes reutilizáveis
+│
+constants/
+└── theme.ts # Definição de cores e configurações de tema
+│
+hooks/ # Hooks personalizados
+```
+---
+
+## ⚙️ Como Rodar o Projeto Localmente
+
+1. Clone o repositório:
+
+   ```bash
+   git clone https://github.com/web-design-on/ground_control/
+   ```
+
+2. Acesse a pasta do projeto
+
+3. Instale as dependências:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+4. Inicie o servidor:
 
    ```bash
    npx expo start
    ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
